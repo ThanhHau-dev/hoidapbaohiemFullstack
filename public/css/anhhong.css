@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* background: radial-gradient(
+      circle,
+      rgba(240, 146, 57, 0.3) 0%,
+      rgba(255, 255, 255, 0.9) 70%
+    ); */
+    background: radial-gradient(
+        circle at 70% 40%,
+        rgba(255, 217, 181, 0.5) 0%,
+        rgba(255, 255, 255, 0) 50%
+      ),
+      radial-gradient(
+        circle at 80% 50%,
+        rgba(245, 228, 175, 0.5) 0%,
+        rgba(255, 255, 255, 0) 50%
+      ),
+      white;
+  }
+  
+  .header__banner {
+    display: flex;
+    /* grid-auto-flow: column; */
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    gap: 100px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100vw;
+    padding: 10px;
+    height: 40%;
+  }
+  
+  .header__banner::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header__banner img {
+    border-radius: 80px;
+  }
+  
+  .header__banner__img__1 {
+    min-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    /* transform: rotate(-1.5deg); */
+    flex-shrink: 1;
+  }
+  
+  .header__banner__img__2 {
+    min-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    /* transform: rotate(-3deg); */
+    flex-shrink: 1;
+  }
+  
+  .header__banner__img__3 {
+    min-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    flex-shrink: 1;
+  }
+  
+  .popup__message__daddy {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup__message {
+    background-color: white;
+    border-radius: 35px;
+    width: 50%;
+    height: fit-content;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .popup__message h4 {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .popup__message__email {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+  }
+  
+  .popup__message__btn {
+    width: 30%;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 50px;
+    border: 0.5px solid black;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .popup__message__btn:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    border: 1px solid white;
+  }
+  
+  main {
+    width: 100%;
+  }
+  
+  .main__req {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-bottom: 100px;
+  }
+  
+  .main__req h1 {
+    font-weight: bold;
+    margin-top: 5%;
+    font-size: 50px;
+  }
+  
+  .main__req h4 {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0.5px 6px 10px 3px rgb(234, 234, 234);
+    width: fit-content;
+    background-color: white;
+  }
+  
+  .main__req h4:hover {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .main__input {
+    margin-top: 20px;
+  }
+  
+  .main__input__daddy {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  
+  .main__input__req {
+    width: 100%;
+    height: 80px;
+    max-height: 200px;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 0.5px solid black;
+    overflow-y: auto; /* Hiển thị thanh cuộn khi quá dài */
+    flex: 1;
+    padding-right: 100px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE và Edge */
+  }
+  
+  /* Ẩn thanh cuộn trên trình duyệt WebKit */
+  .main__input__req::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .main__input__daddy i {
+    font-size: 50px;
+    /* transform: rotate(-30deg) !important; */
+    position: absolute;
+    /* left: 94%; */
+    right: 10px;
+    padding: 10px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .main__input__daddy i:hover {
+    font-size: 40px;
+  }
+  
+  .main__input {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    padding-bottom: 1%;
+  }
+  
+  /* Reponse cho pc màn nhỏ */
+  @media screen and (max-width: 1400px) {
+    .header__banner__img__1,
+    .header__banner__img__2,
+    .header__banner__img__3 {
+      min-width: 700px;
+    }
+  
+    .main__input__daddy i {
+      /* left: 91%; */
+      font-size: 45px;
+    }
+  }
+  
+  /* Reponse cho tablet */
+  @media screen and (max-width: 1000px) {
+    .header__banner__img__1,
+    .header__banner__img__2,
+    .header__banner__img__3 {
+      min-width: 500px;
+      height: 300px;
+    }
+  
+    .main__input__daddy i {
+      /* left: 89%; */
+    }
+  }
+  
+  /* Rreponse cho mobile lớn*/
+  @media screen and (max-width: 750px) {
+    .header__banner__img__1,
+    .header__banner__img__2,
+    .header__banner__img__3 {
+      min-width: 350px;
+      height: 200px;
+    }
+  
+    .header__banner {
+      gap: 50px;
+    }
+  
+    .header__banner img {
+      border-radius: 40px;
+    }
+  
+    .popup__message__email {
+      padding: 15px;
+    }
+  
+    .popup__message {
+      width: 90%;
+    }
+  
+    .popup__message__btn {
+      font-size: 20px;
+      padding: 8px;
+      width: 40%;
+    }
+  
+    .main__req h1 {
+      margin-top: 20%;
+    }
+  
+    .main__input__req {
+      font-size: 20px;
+    }
+  
+    .main__input__daddy i {
+      /* left: 89%; */
+      font-size: 30px;
+    }
+  }
+  
+  /* Reponse cho mobile nhỏ */
+  @media screen and (max-width: 550px) {
+    .header__banner__img__1,
+    .header__banner__img__2,
+    .header__banner__img__3 {
+      min-width: 250px;
+      height: 200px;
+    }
+  
+    .header__banner {
+      gap: 20px;
+    }
+  
+    .header__banner img {
+      border-radius: 40px;
+    }
+  
+    .main__req h1 {
+      margin-top: 20%;
+      font-size: 40px;
+    }
+  
+    .main__req h4 {
+      font-size: 20px;
+    }
+  
+    .main__input {
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .main__input__req {
+      font-size: 14px;
+      height: 50px;
+    }
+  
+    .main__input__daddy i {
+      /* left: 82%; */
+      font-size: 20px;
+    }
+  }
+  
+  /* css fix lỗi hiển thị layout */
+  .main__req__3,
+  .main__req__4,
+  .main__req__5 {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
