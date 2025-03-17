@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+bun.lockb
+
+# Môi trường phát triển
+.env
+.env.local
+.env.development
+.env.production
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build files
+dist/
+out/
+coverage/
+*.cache
+.next/
+.nuxt/
+.svelte-kit/
+public/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Misc
+*.bak
+*.tmp
