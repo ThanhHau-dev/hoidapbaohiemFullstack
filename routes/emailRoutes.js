@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { sendEmail } = require("../controllers/emailController"); // Import từ controller
+const emailController = require("../controllers/emailController");
 
-router.post("/send-email", sendEmail); // Định nghĩa route gửi email
+router.post("/send-email", emailController.sendEmail);
 
 module.exports = router;

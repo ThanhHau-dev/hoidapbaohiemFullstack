@@ -41,7 +41,7 @@ popUpMessBtn.addEventListener("click", () => {
   };
 
   //   Gửi mail về backend
-  fetch("http://localhost:5001/api/send-email", {
+  fetch("/api/send-email", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({data})
